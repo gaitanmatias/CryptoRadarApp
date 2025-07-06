@@ -8,32 +8,55 @@
 
   /* Theme: Dark */
   --text-color-main: #e0e0e0;
-  --text-color-light: #eeeeee;
-  --text-color-dark: #c0c0c0;
+  --text-color-light: #f5f5f5;
+  --text-color-dark: #a0a0a0;
 
-  --bg-color-main: #111111;
-  --bg-color-light: #202020;
-  --bg-color-dark: #050505;
+  --bg-color-main: #0f0f13;
+  --bg-color-light: #23232e;
+  --bg-color-dark: #08080a;
 
-  --primary-color: #4f31d8;
-  --secondary-color: #190a38;
-  --accent-color: #7100c2;
+  --primary-color-main: #6a4fff;
+  --primary-color-light: #8a78ff;
+  --primary-color-dark: #4c36b8;
+  --primary-color-hover: #866dff;
 
-  
-  /* Theme: Light (desactivado por ahora) */
-  /* --text-color-main: #1a1a1a;
-  --text-color-light: #333333;
-  --text-color-dark: #111111;
+  --secondary-color-main: #2d1b5a;
+  --secondary-color-light: #453074;
+  --secondary-color-dark: #1b1040;
+  --secondary-color-hover: #3b2a70;
 
+  --accent-color-main: #c950ff;
+  --accent-color-light: #db8eff;
+  --accent-color-dark: #a037cc;
+  --accent-color-hover: #d873ff;
+
+
+/* Theme: Light (desactivado por ahora) */
+  /* 
+  --text-color-main: #1a1a1a;
+  --text-color-light: #4d4d4d;
+  --text-color-dark: #0f0f0f;
 
   --bg-color-main: #ededed;
-  --bg-color-light: #f5f5f5;
-  --bg-color-dark: #dddddd;
+  --bg-color-light: #f7f7f7;
+  --bg-color-dark: #d1d1d1;
 
+  --primary-color-main: #4627ce;
+  --primary-color-light: #6b57ff;
+  --primary-color-dark: #341ea4;
+  --primary-color-hover: #6243f0;
 
-  --primary-color: #4627ce;
-  --secondary-color: #d6c7f5;
-  --accent-color: #ae3dff; */
+  --secondary-color-main: #d6c7f5;
+  --secondary-color-light: #e6dbff;
+  --secondary-color-dark: #a69ed0;
+  --secondary-color-hover: #e8defa;
+
+  --accent-color-main: #ae3dff;
+  --accent-color-light: #ca8bff;
+  --accent-color-dark: #7a28b8;
+  --accent-color-hover: #c164ff;
+  */
+
  
 
   /* Success colors */
