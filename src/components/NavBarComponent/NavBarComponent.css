@@ -36,13 +36,13 @@
   transition: all 0.3s ease;
 }
 
-.nav-link.active {
+.nav-link-active {
   color: var(--primary-color-light);
   font-weight: 700;
   border-bottom: 2px solid var(--primary-color-light);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .navbar {
     height: 65px;
     padding: 0 25px;
