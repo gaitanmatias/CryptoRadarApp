@@ -6,17 +6,19 @@ export default function NavBarComponent() {
     `nav-link ${isActive ? 'nav-link-active' : ''}`;
 
   return (
-    <nav className="navbar">
-      <NavLink to="/" className='navbar-brand'>Crypto Radar</NavLink>
-
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <NavLink to="/" className={getNavLinkClass}>Inicio</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/watchlist" className={getNavLinkClass}>Favoritos</NavLink>
-        </li>
-      </ul>
-    </nav>
+    <header className="navbar-header">
+      <nav className="navbar">
+        <NavLink to="/" className='navbar-brand'>Crypto Radar</NavLink>
+      
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <NavLink to="/" className={getNavLinkClass}>Inicio</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/watchlist" className={getNavLinkClass}>Favoritos</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
