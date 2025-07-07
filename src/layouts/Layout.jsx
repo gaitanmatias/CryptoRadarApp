@@ -8,9 +8,7 @@ function Layout() {
   return (
     <div className="layout-container">
       <NavBarComponent />
-      <main className="main-content">
-        <Outlet className="outlet" /> 
-      </main>
+      <Outlet className="outlet" /> 
       <FooterComponent />
     </div>
   )
