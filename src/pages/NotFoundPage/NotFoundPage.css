@@ -3,14 +3,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  /* flex: 1; */
   gap: 5px;
   
-  height: 100%;
+  height: 100vh;
 
   text-align: center;
 
   background-color: var(--bg-color-dark);
+}
+
+.not-found-brand {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+
+  font-family: var(--font-heading);
+  font-size: var(--subtitle-size);
+  color: var(--text-color-main);
+  font-weight: 700;
+  
+  border-bottom: 1px solid var(--text-color-light);
 }
 
 .not-found-title {
@@ -33,7 +46,7 @@
   
   font-family: var(--font-heading);
   font-size: var(--info-size);
-  color: var(--text-color-light);
+  color: var(--text-button-light);
   font-weight: 500;
   
   background-color: var(--primary-color-main);

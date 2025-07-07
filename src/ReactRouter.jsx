@@ -12,8 +12,8 @@ function AppRoutes() {
         <Route index element={<HomePage />} />
         <Route path="crypto/:id" element={<DetailPage />} />
         <Route path="watchlist" element={<WatchListPage />} />
-        <Route path="*" element={<NotFoundPage />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
