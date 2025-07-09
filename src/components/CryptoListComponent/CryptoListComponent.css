@@ -1,0 +1,32 @@
+.crypto-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  padding: 5px;
+
+  border: 1px solid var(--accent-color-main-30);
+  overflow: hidden;
+}
+
+.crypto-list-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+
+  height: 50px;
+  padding: 5px;
+  
+  background-color: var(--secondary-color-main-10);
+}
+
+.crypto-list-header-title {
+  font-family: var(--font-heading);
+  font-size: var(--paragraph-size);
+  font-weight: 400;
+  color: var(--text-color-main);
+}
+
+.crypto-list-header-title:last-of-type {
+  text-align: center;
+}
