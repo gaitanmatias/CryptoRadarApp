@@ -3,6 +3,7 @@
   flex-direction: column;
   border-radius: 10px;
 
+  max-width: 600px;
   padding: 5px;
 
   border: 1px solid var(--accent-color-main-30);
@@ -11,9 +12,9 @@
 
 .crypto-list-header {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 1fr 70px 60px;
   align-items: center;
-
+  
   height: 50px;
   padding: 5px;
   
@@ -29,4 +30,14 @@
 
 .crypto-list-header-title:last-of-type {
   text-align: center;
+}
+
+@media screen and (min-width: 720px) {
+  .crypto-list {
+    max-width: none;
+  }
+  
+  .crypto-list-header {
+    grid-template-columns: 1fr 100px 100px;
+  }
 }

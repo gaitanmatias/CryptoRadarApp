@@ -4,19 +4,33 @@ import "./CryptoCardComponent.css";
 const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
   const priceChangeClass = priceChange >= 0 ? " positive" : " negative";
 
+  const formatPrice = (price) => {
+    const decimals = price < 0.99 ? 4 : price >= 1000 ? 0 : 2;
+    return new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    }).format(price);
+  };
+
+
+  const formatPriceChange = (change) => {
+    if (Math.abs(change) < 0.01) return "<0.01%";
+    return change.toFixed(2) + "%";
+  };
+
   return (
-    <Link to={`/detail/${id}`}>
+    <Link to={`/crypto/${id}`}>
       <div className="crypto-card">
-        <div className="crypto-header">
+        <div className="crypto-header" title={name  + " - " + symbol.toUpperCase()}>
           <img src={image} alt={name} className="crypto-image" />
           <h3 className="crypto-name">
-            {name} ({symbol.toUpperCase()})
+            ({symbol.toUpperCase()}) - {name} 
           </h3>
         </div>
-        <p className="crypto-price">${price}</p>
+        <p className="crypto-price">${formatPrice(price)}</p>
         <p className={`crypto-price-change ${priceChangeClass}`}>
           {priceChange >= 0 ? "+" : ""}
-          {priceChange}%
+          {formatPriceChange(priceChange)}
         </p>
       </div>
     </Link>
