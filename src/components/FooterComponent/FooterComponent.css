@@ -1,26 +1,24 @@
-.footer{
+.footer {
   background-color: var(--bg-color-main);
   color: var(--text-color-main);
   padding: 10px 20px;
   text-align: center;
-  font-size: var(--paragraph-size);
 }
 
-.footer-link{
+.footer-text {
+  font-size: var(--info-size);
+  font-weight: 300;
+}
+
+.footer-link {
   color: var(--primary-color-light);
   font-family: var(--font-heading);
   font-weight: 700;
   border-bottom: 1px solid var(--primary-color-light);
 }
 
-.footer-brand{
+.footer-brand {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text-color-light);
-}
-
-@media screen and (min-width: 720px) {
- .footer{
-  padding: 20px;
- } 
 }
