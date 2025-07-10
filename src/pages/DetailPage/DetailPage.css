@@ -1,0 +1,145 @@
+.crypto-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 25px;
+  
+  width: 100%;
+  padding: 20px;
+  
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-main);
+}
+
+.crypto-detail-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  width: 100%;
+  padding: 20px;
+}
+
+.crypto-detail-name {
+  font-size: var(--title-size);
+  color: var(--primary-color-main);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.crypto-detail-header, .crypto-detail-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crypto-detail-header {
+  gap: 15px;
+}
+
+.crypto-detail-image {
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+  border: 5px solid var(--primary-color-dark);
+  object-fit: cover;
+}
+
+.crypto-detail-title{
+  font-size: var(--subtitle-size);
+  color: var(--text-color-main);
+  font-weight: 600;
+}
+
+.crypto-detail-symbol {
+  font-size: var(--subtitle-size);
+  color: var(--text-color-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.crypto-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+  width: 100%;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding-top: 15px;
+  
+  font-family: var(--font-heading);
+  text-align: center;
+  
+  border-top: 1px solid var(--primary-color-main-30);
+}
+
+.crypto-detail-price {
+  font-size: var(--subtitle-size);
+}
+
+.crypto-details-title {
+  font-size: var(--paragraph-size);
+  font-family: var(--font-heading);
+  color: var(--primary-color-main);
+  font-weight: 600;
+}
+
+.crypto-detail-change.positive {
+  color: var(--success-main);
+}
+
+.crypto-detail-change.negative {
+  color: var(--error-main);
+}
+
+@media screen and (max-width: 350px) {
+  .detail{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .crypto-detail-info-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .crypto-detail-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  
+  .crypto-detail-title {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .detail {
+   justify-content: start;
+
+   border: none;
+  }
+
+  .crypto-details-title {
+    width: 60%;
+    text-align: left;
+  }
+}
