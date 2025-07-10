@@ -8,7 +8,7 @@
   width: 100%;
   padding: 30px 2px;
 
-  background: var(--bg-home);
+  background: var(--bg-gradient);
   background-color: var(--bg-color-dark);
   color: var(--text-color-main);
 }
