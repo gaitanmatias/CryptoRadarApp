@@ -70,6 +70,6 @@
   }
 
   .crypto-name {
-    max-width: none;
+    max-width: 350px;
   }
 }
