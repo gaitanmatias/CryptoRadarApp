@@ -11,6 +11,10 @@
   border-top: 1px solid var(--accent-color-main-30);
 }
 
+.crypto-card:hover {
+  background-color: var(--secondary-color-main-30);
+}
+
 .crypto-header {
   display: flex;
   align-items: center;
