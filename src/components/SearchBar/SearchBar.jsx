@@ -72,7 +72,12 @@ const SearchBar = ({ cryptos = [] }) => {
 
   return (
     <div className="search-bar" ref={wrapperRef}>
-      <div className="search-bar__input-wrapper">
+      <form className="search-bar__input-wrapper"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSearch()
+        }}>
+        
         <Icons.Search className="search-bar__icon" />
         <input
           type="text"
@@ -95,7 +100,7 @@ const SearchBar = ({ cryptos = [] }) => {
           onClick={clearSearch}
           aria-label="Limpiar búsqueda" />
         )}
-      </div>
+      </form>
 
       {showDropdown && (
         <ul className="search-bar__dropdown">
