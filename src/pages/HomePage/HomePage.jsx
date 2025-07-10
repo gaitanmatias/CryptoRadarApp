@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './HomePage.css'
-import mockCryptos from '../../mockData'
+import { getTopCryptos } from '../../services/cryptoService'
 import CryptoList from '../../components/CryptoListComponent/CryptoListComponent'
+import SearchBarComponent from "../../components/SearchBarComponent/SearchBarComponent";
 
 function HomePage() {
+  const [cryptos, setCryptos] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getTopCryptos();
+      setCryptos(result);
+    };
+    fetchData();
+  }, []);
+
   return (
     <main className="home-page">
       <section className="hero">
@@ -12,11 +23,9 @@ function HomePage() {
       </section>
 
       <section className='crypto-section'>
-          {/* <SearchBar /> */}
-        <section className='crypto-list-section'>
-          <p className='crypto-list-description'>Explora las criptomonedas más populares</p>
-          <CryptoList cryptos={mockCryptos} />
-        </section>
+        <p className='crypto-description'>Explora las criptomonedas más populares</p>
+        <SearchBarComponent cryptos={cryptos} />
+        <CryptoList cryptos={cryptos.slice(0, 10)} />
       </section>
     </main>
   )

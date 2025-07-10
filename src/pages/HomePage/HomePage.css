@@ -3,20 +3,21 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 50px;
+  flex: 1;
+  gap: 60px;
   
   width: 100%;
-  padding: 20px;
+  padding: 30px 20px;
 
   background: var(--bg-home);
   background-color: var(--bg-color-dark);
   color: var(--text-color-main);
 }
 
-.hero, .crypto-section, .crypto-list-section {
+.hero, .crypto-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 
   width: 100%;
   max-width: 800px;
@@ -40,7 +41,7 @@
   line-height: 200%;
 }
 
-.crypto-list-description {
+.crypto-description {
   max-width: 90%;
 
   font-size: var(--subtitle-size);
@@ -54,7 +55,7 @@
     align-items: center;
     gap: 100px;
 
-    padding: 20px;
+    padding: 50px;
   }
 
   .hero {
@@ -69,11 +70,7 @@
     max-width: 700px;
   }
 
-  .crypto-list-section {
-    gap: 25px;
-  }
-
-  .crypto-list-description {
+  .crypto-description {
     width: 65%;
   }
 }
