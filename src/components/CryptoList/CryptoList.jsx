@@ -1,5 +1,5 @@
-import CryptoCard from "../CryptoCardComponent/CryptoCardComponent";
-import "./CryptoListComponent.css";
+import CryptoCard from "../CryptoCard/CryptoCard";
+import "./CryptoList.css";
 
 const CryptoList = ({ cryptos }) => {
   return (

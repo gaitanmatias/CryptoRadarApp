@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./DetailPage.css";
-import CryptoChart from "../../components/CryptoChartComponent/CryptoChartComponent";
+import CryptoChart from "../../components/CryptoChart/CryptoChart";
 
 const DetailPage = () => {
   const { id } = useParams();

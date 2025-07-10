@@ -9,7 +9,7 @@ import {
   Filler,
 } from "chart.js";
 import { useEffect, useState } from "react";
-import "./CryptoChartComponent.css"
+import "./CryptoChart.css"
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Filler);
 
@@ -24,7 +24,7 @@ const formatDate = (timestamp, timeframe) => {
   }
 };
 
-const CryptoChartComponent = ({ coinId }) => {
+const CryptoChart = ({ coinId }) => {
   const [chartData, setChartData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [timeframe, setTimeframe] = useState("7");
@@ -133,4 +133,4 @@ const CryptoChartComponent = ({ coinId }) => {
   );
 };
 
-export default CryptoChartComponent;
+export default CryptoChart;

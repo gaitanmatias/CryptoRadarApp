@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Icons from "../../icons/icons"; 
-import "./SearchBarComponent.css";
+import "./SearchBar.css";
 
-const SearchBarComponent = ({ cryptos = [] }) => {
+const SearchBar = ({ cryptos = [] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
@@ -129,4 +129,4 @@ const SearchBarComponent = ({ cryptos = [] }) => {
   );
 };
 
-export default SearchBarComponent;
+export default SearchBar;

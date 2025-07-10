@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import CryptoList from "../../components/CryptoListComponent/CryptoListComponent";
+import CryptoList from "../../components/CryptoList/CryptoList";
 import "./SearchResultsPage.css";
 
 const SearchResults = () => {

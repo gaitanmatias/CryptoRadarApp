@@ -3,7 +3,7 @@ import React from 'react'
 function WatchlistPage() {
   return (
     <main>
-      <h1>WatchlistPage!</h1>
+      <h1>Proximamente</h1>
     </main>
   )
 }

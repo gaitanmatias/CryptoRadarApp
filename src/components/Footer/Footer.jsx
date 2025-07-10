@@ -1,7 +1,7 @@
 import React from 'react'
-import './FooterComponent.css'
+import './Footer.css'
 
-function FooterComponent() {
+function Footer() {
   return (
     <footer className="footer">
       <p className="footer-text">
@@ -18,4 +18,4 @@ function FooterComponent() {
   )
 }
 
-export default FooterComponent
+export default Footer

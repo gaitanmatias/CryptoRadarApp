@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import './NavBarComponent.css';
+import './NavBar.css';
 
-export default function NavBarComponent() {
+export default function NavBar() {
   const getNavLinkClass = ({ isActive }) => 
     `nav-link ${isActive ? 'nav-link-active' : ''}`;
 

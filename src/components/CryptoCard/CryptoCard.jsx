@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./CryptoCardComponent.css";
+import "./CryptoCard.css";
 
 const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
   const priceChangeClass = priceChange >= 0 ? " positive" : " negative";

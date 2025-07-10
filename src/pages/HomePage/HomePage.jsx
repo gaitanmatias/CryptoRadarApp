@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './HomePage.css'
 import { getTopCryptos } from '../../services/cryptoService'
-import CryptoList from '../../components/CryptoListComponent/CryptoListComponent'
-import SearchBarComponent from "../../components/SearchBarComponent/SearchBarComponent";
+import CryptoList from '../../components/CryptoList/CryptoList'
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 function HomePage() {
   const [cryptos, setCryptos] = useState([]);
@@ -24,7 +24,7 @@ function HomePage() {
 
       <section className='crypto-section'>
         <p className='crypto-description'>Explora las criptomonedas más populares</p>
-        <SearchBarComponent cryptos={cryptos} />
+        <SearchBar cryptos={cryptos} />
         <CryptoList cryptos={cryptos.slice(0, 10)} />
       </section>
     </main>
