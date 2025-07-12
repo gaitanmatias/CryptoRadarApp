@@ -49,6 +49,16 @@
   border-bottom: 2px solid var(--primary-color-light);
 }
 
+@media screen and (max-width: 350px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .navbar {
     height: 65px;
