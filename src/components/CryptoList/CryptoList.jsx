@@ -1,7 +1,8 @@
 import CryptoCard from "../CryptoCard/CryptoCard";
 import "./CryptoList.css";
+import Loader from '../Loader/Loader'
 
-const CryptoList = ({ cryptos }) => {
+const CryptoList = ({ cryptos, loading }) => {
   return (
     <div className="crypto-list">
       <div className="crypto-list-header">
@@ -10,7 +11,9 @@ const CryptoList = ({ cryptos }) => {
         <span className="crypto-list-header-title">Cambio</span>
       </div>
 
-      {cryptos.map((crypto) => (
+      {
+      loading ? <Loader /> : (
+        cryptos.map((crypto) => (
         <CryptoCard
           key={crypto.id}
           id={crypto.id}
@@ -20,6 +23,9 @@ const CryptoList = ({ cryptos }) => {
           price={crypto.current_price}
           priceChange={crypto.price_change_percentage_24h}
         />
+      )
+      
+      
       ))}
     </div>
   );

@@ -6,11 +6,13 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 
 function HomePage() {
   const [cryptos, setCryptos] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await getTopCryptos();
       setCryptos(result);
+      setLoading(false)
     };
     fetchData();
   }, []);
@@ -25,7 +27,7 @@ function HomePage() {
       <section className='crypto-section'>
         <p className='crypto-description'>Explora las criptomonedas más populares</p>
         <SearchBar cryptos={cryptos} />
-        <CryptoList cryptos={cryptos.slice(0, 10)} />
+        <CryptoList loading={loading} cryptos={cryptos.slice(0, 10)} />
       </section>
     </main>
   )

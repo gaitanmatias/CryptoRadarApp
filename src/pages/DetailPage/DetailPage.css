@@ -1,4 +1,4 @@
-.crypto-detail-container {
+.crypto-detail-container, .crypto-detail-container.loader-container {
   display: flex;
   flex-direction: column;
   align-items: center;

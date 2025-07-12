@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./DetailPage.css";
 import CryptoChart from "../../components/CryptoChart/CryptoChart";
+import Loader from '../../components/Loader/Loader'
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -26,7 +27,11 @@ const DetailPage = () => {
     fetchCrypto();
   }, [id]);
 
-  if (loading) return <p>Cargando detalles...</p>;
+  if (loading) return (
+    <main className="crypto-detail-container">
+      <Loader />
+    </main>
+  );
 
   if (!crypto) return <p>No se pudo cargar la información.</p>;
 

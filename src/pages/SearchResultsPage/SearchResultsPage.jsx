@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CryptoList from "../../components/CryptoList/CryptoList";
 import "./SearchResultsPage.css";
+import Loader from '../../components/Loader/Loader'
+
 
 const SearchResults = () => {
   const { searchTerm } = useParams();
@@ -18,7 +20,7 @@ const SearchResults = () => {
         if (!ids) {
           setResults([]);
           return;
-        }
+        } 
 
         const marketRes = await fetch(
           `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`
@@ -48,7 +50,7 @@ const SearchResults = () => {
         </section>
         
         {loading ? (
-          <p className="search-results__loading">Cargando...</p>
+          <Loader />
         ) : results.length === 0 ? (
           <p className="search-results__empty">No se encontraron resultados.</p>
         ) : (
