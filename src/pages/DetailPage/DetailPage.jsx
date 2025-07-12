@@ -33,7 +33,12 @@ const DetailPage = () => {
     </main>
   );
 
-  if (!crypto) return <p>No se pudo cargar la información.</p>;
+  if (!crypto) return (
+    <main className="crypto-detail-container crypto-detail-error">
+      <h2 className="crypto-detail-error--title">Error!</h2>
+      <p className="crypto-detail-error--text">No se pudo cargar la información.</p>
+    </main>
+  );
 
   return (
     <main className="crypto-detail-container">

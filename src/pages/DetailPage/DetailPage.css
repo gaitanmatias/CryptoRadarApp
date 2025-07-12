@@ -107,6 +107,19 @@
   color: var(--error-main);
 }
 
+.crypto-detail-error{
+  justify-content: center;
+}
+
+.crypto-detail-error--title{
+  font-size: var(--title-size);
+  color: var(--accent-color-dark);
+}
+.crypto-detail-error--text{
+  font-size: var(--subtitle-size);
+  color: var(--text-color-dark);
+}
+
 @media screen and (max-width: 350px) {
   .detail{
     flex-direction: column;
