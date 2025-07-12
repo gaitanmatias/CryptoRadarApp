@@ -1,9 +1,11 @@
 import React from 'react'
+import Loader from '../../components/Loader/Loader'
+import './WatchlistPage.css'
 
 function WatchlistPage() {
   return (
-    <main>
-      <h1>Proximamente</h1>
+    <main className='watchlist-container'>
+      <h2 className='watchlist-title'>Próximamente...</h2>
     </main>
   )
 }

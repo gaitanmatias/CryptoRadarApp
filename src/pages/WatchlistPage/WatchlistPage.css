@@ -1,0 +1,20 @@
+.watchlist-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 60px;
+  
+  width: 100%;
+  padding: 30px 2px;
+
+  background: var(--bg-gradient);
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-main);
+}
+
+.watchlist-title {
+  font-size: var(--title-size);
+  color: var(--text-color-dark);
+  letter-spacing: 2px;
+}
