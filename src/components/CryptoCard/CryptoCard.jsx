@@ -5,7 +5,7 @@ const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
   const priceChangeClass = priceChange >= 0 ? " positive" : " negative";
 
   const formatPrice = (price) => {
-    const decimals = price < 0.99 ? 4 : price >= 1000 ? 0 : 2;
+    const decimals = price < 0.99 ? 3 : price >= 1000 ? 0 : 2;
     return new Intl.NumberFormat("en-US", {
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals,
