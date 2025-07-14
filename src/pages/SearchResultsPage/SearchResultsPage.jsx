@@ -56,7 +56,7 @@ const SearchResults = () => {
         ) : (
           <section className="search-results__body">
             <h2 className="search-results__body-title">Resultados encontrados ({results.length})</h2>
-            <CryptoList cryptos={results} className="search-results__list"/>
+            <CryptoList cryptos={results}/>
           </section>
         )}
       </div>
