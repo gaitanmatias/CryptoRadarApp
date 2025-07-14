@@ -29,8 +29,8 @@ El proyecto está desarrollado con **React** y gestionado mediante **React Route
 ```
 /
 ├─ public/
-│   └─ favicon.webp
-│   
+│   ├─ favicon.webp
+│   └─ _redirects
 ├─ src/
 │   ├─ components/
 │   │   ├─ CryptoChart/
@@ -38,31 +38,22 @@ El proyecto está desarrollado con **React** y gestionado mediante **React Route
 │   │   ├─ CryptoList/
 │   │   ├─ CryptoCard/
 │   │   ├─ Footer/
-│   │   └─ NavBar/
-│   │   
+│   │   ├─ NavBar/
+│   │   └─ Loader/
+│   ├─ icons/
 │   ├─ layouts/
-│   │   
 │   ├─ pages/
 │   │   ├─ HomePage/
 │   │   ├─ DetailPage/
 │   │   ├─ SearchResultsPage/
 │   │   └─ NotFoundPage/
-│   │   
 │   ├─ services/
 │   │   └─ cryptoService.js
-│   │   
-│   ├─ icons/
-│   │   └─ icons.js
-│   │   
 │   ├─ styles/
 │   │   └─ base.css
-│   │   
-│   ├─ ReactRouter.jsx
-│   │ 
 │   ├─ App.jsx
-│   │
+│   ├─ ReactRouter.jsx
 │   └─ main.jsx
-│   
 ├─ index.html
 ├─ vite.config.js
 └─ package.json
@@ -82,10 +73,14 @@ El proyecto está desarrollado con **React** y gestionado mediante **React Route
 
 ## 🧩 Próximos pasos
 
-- Modo claro/oscuro con Context API.
-- Guardado en favoritos con LocalStorage.
-- Internacionalización (EN/ES).
-- Mejoras de UI/UX y más metadatos por cripto.
+🔄 Próximas mejoras planificadas:
+🌗 Modo claro/oscuro usando useContext
+🌍 Alternar de idioma (inglés/español)
+⭐ Guardado de criptomonedas favoritas usando LocalStorage
+🧭 Implementar un modal de navegación para dispositivos móviles
+🧾 Actualizar dinámicamente el título de la página según el contenido
+
+Tengo en mente seguir sumándole mejoras. Me entusiasma poder seguir construyendo sobre esta base e incorporar nuevas funcionalidades en futuras versiones 🚧
 
 ---
 
