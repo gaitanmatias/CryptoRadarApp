@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 import './NavBar.css';
 
 export default function NavBar() {
@@ -17,7 +18,9 @@ export default function NavBar() {
           <li className="nav-item">
             <NavLink to="/watchlist" className={getNavLinkClass}>Favoritos</NavLink>
           </li>
+          <ThemeToggleButton />
         </ul>
+        
       </nav>
     </header>
   );
