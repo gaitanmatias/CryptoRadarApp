@@ -8,9 +8,8 @@
   width: 100%;
   padding: 30px 2px;
 
-  background: var(--bg-gradient);
-  background-color: var(--bg-color-dark);
-  color: var(--text-color-main);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .search-results__container {
@@ -42,7 +41,7 @@
 .search-results__header-description {
   font-size: var(--paragraph-size);
   font-weight: 400;
-  color: var(--text-color-dark);
+  color: var(--muted-foreground);
   font-family: var(--font-heading);
 }
 
@@ -60,14 +59,14 @@
 
   font-size: var(--subtitle-size);
   font-weight: 500;
-  color: var(--text-color-main);
+  color: var(--foreground);
   font-family: var(--font-heading);
 }
 
 .search-results__loading, .search-results__empty {
   font-size: var(--title-size);
   font-weight: 500;
-  color: var(--text-color-dark);
+  color: var(--muted-foreground);
   font-family: var(--font-heading);
 }
 

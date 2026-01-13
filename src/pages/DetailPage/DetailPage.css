@@ -8,9 +8,8 @@
   width: 100%;
   padding: 10px;
   
-  background: var(--bg-gradient);
-  background-color: var(--bg-color-dark);
-  color: var(--text-color-main);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .crypto-detail-info-container {
@@ -25,7 +24,6 @@
 
 .crypto-detail-name {
   font-size: var(--title-size);
-  color: var(--primary-color-main);
   font-weight: 800;
   text-align: center;
   letter-spacing: 2px;
@@ -40,7 +38,7 @@
 }
 
 .crypto-detail-header {
-  gap: 15px;
+  gap: 10px;
 }
 
 .crypto-detail-image {
@@ -48,20 +46,21 @@
   height: 105px;
 
   border-radius: 50%;
-  border: 5px solid var(--primary-color-dark);
+  border: 2px solid var(--background);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
 
 .crypto-detail-title{
   font-size: var(--subtitle-size);
-  color: var(--text-color-main);
   font-weight: 600;
 }
 
 .crypto-detail-symbol {
   font-size: var(--subtitle-size);
-  color: var(--text-color-dark);
+  color: var(--secondary-foreground);
   font-weight: 400;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -69,7 +68,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0px;
   
   width: 100%;
 }
@@ -80,12 +79,13 @@
   justify-content: space-between;
 
   width: 100%;
-  padding-top: 15px;
+  padding: 15px 5px;
   
   font-family: var(--font-heading);
   text-align: center;
   
-  border-top: 1px solid var(--primary-color-main-30);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent 50%);
+
 }
 
 .crypto-detail-price {
@@ -95,7 +95,7 @@
 .crypto-details-title {
   font-size: var(--paragraph-size);
   font-family: var(--font-heading);
-  color: var(--primary-color-main);
+  color: color-mix(in srgb, var(--primary) 50%, var(--foreground) 50%);
   font-weight: 600;
 }
 
@@ -113,11 +113,11 @@
 
 .crypto-detail-error--title{
   font-size: var(--title-size);
-  color: var(--accent-color-dark);
+  color: var(--accent);
 }
 .crypto-detail-error--text{
   font-size: var(--subtitle-size);
-  color: var(--text-color-dark);
+  color: var(--foreground);
 }
 
 @media screen and (max-width: 350px) {

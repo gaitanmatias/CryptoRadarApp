@@ -12,27 +12,36 @@
 
 .crypto-chart__buttons {
   display: flex;
-  align-items: center;
+  align-items:flex-end;
   justify-content: center;
   gap: 10px;
+
+  min-height: 50px;
 }
 
 .crypto-chart__buttons button {
   padding: 10px 20px;
 
   font-weight: 700;
-  color: var(--text-button-main);
+  color: var(--foreground);
 
-  border: none;
-  background-color: var(--secondary-color-main);
+  border: 1px solid var(--accent);
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.crypto-chart__buttons button.active,
-.crypto-chart__buttons button:hover {
-  background-color: var(--primary-color-main);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+.crypto-chart__buttons button.active {
+  padding: 15px 25px;
+  background-color: color-mix(in srgb, var(--accent) 75%, var(--accent-foreground) 25%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.crypto-detail-chart {
+  display: flex;
+  justify-content: center;
+
+  min-height: fit-content;
+  height: 150px;
 }
 

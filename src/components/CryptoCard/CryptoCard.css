@@ -7,12 +7,12 @@
   height: 50px;
   padding: 5px;
 
-  background-color: var(--secondary-color-main-10);
-  border-top: 1px solid var(--accent-color-main-30);
+  background-color: color-mix(in srgb, var(--secondary) 50%, transparent 50%);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 75%, transparent 25%);
 }
 
 .crypto-card:hover {
-  background-color: var(--secondary-color-main-30);
+  background-color: color-mix(in srgb, var(--accent) 25%, transparent 75%);
 }
 
 .crypto-header {

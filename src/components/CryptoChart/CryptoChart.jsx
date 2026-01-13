@@ -56,7 +56,7 @@ const CryptoChart = ({ coinId }) => {
         data: chartData.map((p) => p[1]),
         fill: true,
         borderColor: "#c950ff",
-        backgroundColor: "rgba(106, 79, 255, 0.3)",
+        backgroundColor: "rgba(106, 79, 255, 0.35)",
         tension: 0.3,
         pointRadius: 1,
       },
@@ -72,15 +72,15 @@ const CryptoChart = ({ coinId }) => {
           display: false,
         },
         ticks: {
-          color: "#ccc",
+          color: "rgba(128, 128, 128, 0.95)",
         },
       },
       y: {
         grid: {
-          color: "#333",
+          color: "rgba(128, 128, 128, 0.25)",
         },
         ticks: {
-          color: "#ccc",
+          color: "rgba(128, 128, 128, 0.95)",
         },
       },
     },
@@ -91,10 +91,10 @@ const CryptoChart = ({ coinId }) => {
       tooltip: {
         mode: "index",
         intersect: false,
-        backgroundColor: "#1f2937",
+        backgroundColor: "rgba(255, 255, 255, 0.75)",
         displayColors: false,
-        titleColor: "#fff",
-        bodyColor: "#fff",
+        titleColor: "#1a1a1a",
+        bodyColor: "#1a1a1a",
       },
       interaction: {
         mode: "nearest",

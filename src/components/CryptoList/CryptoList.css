@@ -4,9 +4,8 @@
   border-radius: 10px;
 
   max-width: 600px;
-  padding: 5px;
 
-  border: 1px solid var(--accent-color-main-30);
+  border: 1px solid var(--accent);
   overflow: hidden;
 }
 
@@ -16,9 +15,9 @@
   align-items: center;
   
   height: 50px;
-  padding: 5px;
+  padding: 10px;
   
-  background-color: var(--secondary-color-main-10);
+  background-color: color-mix(in srgb, var(--secondary) 25%, transparent 75%);
 }
 
 .crypto-list-header-title {

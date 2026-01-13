@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <header className="navbar-header">
       <nav className="navbar">
-        <NavLink to="/" className='navbar-brand'>Crypto Radar</NavLink>
+        <NavLink to="/" className='navbar-brand'>CryptoRadar</NavLink>
       
         <ul className="navbar-nav">
           <li className="nav-item">
