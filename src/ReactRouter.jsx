@@ -1,10 +1,15 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './layouts/Layout'
-import HomePage from './pages/HomePage/HomePage'
-import DetailPage from './pages/DetailPage/DetailPage'
-import WatchListPage from './pages/WatchlistPage/WatchlistPage'
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
-import SearchResults from './pages/SearchResultsPage/SearchResultsPage'
+// Librerías
+import { Routes, Route } from "react-router-dom";
+
+// Layouts
+import Layout from "./layouts/Layout";
+
+// Páginas
+import HomePage from "./pages/HomePage/HomePage";
+import DetailPage from "./pages/DetailPage/DetailPage";
+import WatchListPage from "./pages/WatchlistPage/WatchlistPage";
+import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function AppRoutes() {
   return (
@@ -13,7 +18,7 @@ function AppRoutes() {
         <Route index element={<HomePage />} />
         <Route path="crypto/:id" element={<DetailPage />} />
         <Route path="watchlist" element={<WatchListPage />} />
-        <Route path="/search/:searchTerm" element={<SearchResults />} />
+        <Route path="/search/:searchTerm" element={<SearchResultsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

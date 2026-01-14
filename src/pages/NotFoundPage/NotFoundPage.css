@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
+
   height: 100vh;
 
   text-align: center;
@@ -42,15 +42,19 @@
   margin-top: 25px;
   padding: 15px 20px;
   border-radius: 10px;
-  
+
   font-family: var(--font-heading);
   font-size: var(--info-size);
   color: var(--primary-foreground);
   font-weight: 500;
-  
+
   background-color: var(--primary);
 }
 
 .not-found-link:hover {
-  background-color: color-mix(in srgb, var(--primary) 80%, var(--primary-foreground) 20%);
+  background-color: color-mix(
+    in srgb,
+    var(--primary) 80%,
+    var(--primary-foreground) 20%
+  );
 }

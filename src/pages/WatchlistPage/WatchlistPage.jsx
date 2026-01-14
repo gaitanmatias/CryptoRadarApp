@@ -1,10 +1,17 @@
+// React
 import { useEffect, useState } from "react";
-import Loader from "../../components/Loader/Loader";
-import "./WatchlistPage.css";
+
+// Servicios
 import { getFavorites } from "../../services/favoritesService";
-import CryptoList from "../../components/CryptoList/CryptoList";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import { getCryptosByIds } from "../../services/cryptoService";
+
+// Componentes
+import CryptoList from "../../components/CryptoList/CryptoList";
+import Loader from "../../components/Loader/Loader";
+import SearchBar from "../../components/SearchBar/SearchBar";
+
+// Estilos
+import "./WatchlistPage.css";
 
 function WatchlistPage() {
   const [coins, setCoins] = useState([]);
@@ -31,7 +38,9 @@ function WatchlistPage() {
 
   return (
     <main className="watchlist-container">
-      <h1 className="watchlist-title">Accedé a tus criptomonedas favoritas más rápido</h1>
+      <h1 className="watchlist-title">
+        Accedé a tus criptomonedas favoritas más rápido
+      </h1>
       <SearchBar cryptos={coins} />
       <CryptoList loading={false} cryptos={coins} />
     </main>

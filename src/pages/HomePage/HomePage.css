@@ -5,7 +5,7 @@
   align-items: center;
   flex: 1;
   gap: 60px;
-  
+
   width: 100%;
   padding: 30px 20px;
 
@@ -13,7 +13,8 @@
   color: var(--foreground);
 }
 
-.hero, .crypto-section {
+.hero,
+.crypto-section {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -24,7 +25,7 @@
 
 .hero-title {
   max-width: 600px;
-  
+
   font-size: var(--title-size);
   font-weight: 700;
   color: var(--foreground);

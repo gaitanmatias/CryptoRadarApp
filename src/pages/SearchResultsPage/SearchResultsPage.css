@@ -4,7 +4,7 @@
   justify-content: center;
   flex: 1;
   gap: 60px;
-  
+
   width: 100%;
   padding: 30px 2px;
 
@@ -23,7 +23,7 @@
   max-width: 700px;
 }
 
-.search-results__header{
+.search-results__header {
   max-width: 800px;
   padding: 10px;
 }
@@ -63,7 +63,8 @@
   font-family: var(--font-heading);
 }
 
-.search-results__loading, .search-results__empty {
+.search-results__loading,
+.search-results__empty {
   font-size: var(--title-size);
   font-weight: 500;
   color: var(--muted-foreground);

@@ -14,10 +14,10 @@
   display: grid;
   grid-template-columns: 1fr 70px 60px;
   align-items: center;
-  
+
   height: 50px;
   padding: 10px;
-  
+
   background-color: color-mix(in srgb, var(--secondary) 25%, transparent 75%);
 }
 
@@ -36,7 +36,7 @@
   .crypto-list {
     max-width: none;
   }
-  
+
   .crypto-list-header {
     grid-template-columns: 1fr 100px 100px;
   }

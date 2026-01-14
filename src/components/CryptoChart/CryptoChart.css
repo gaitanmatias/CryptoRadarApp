@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+
   width: 100%;
   max-width: 600px;
   height: 100%;
@@ -12,7 +12,7 @@
 
 .crypto-chart__buttons {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: center;
   gap: 10px;
 
@@ -33,7 +33,11 @@
 
 .crypto-chart__buttons button.active {
   padding: 15px 25px;
-  background-color: color-mix(in srgb, var(--accent) 75%, var(--accent-foreground) 25%);
+  background-color: color-mix(
+    in srgb,
+    var(--accent) 75%,
+    var(--accent-foreground) 25%
+  );
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -44,4 +48,3 @@
   min-height: fit-content;
   height: 150px;
 }
-

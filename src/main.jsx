@@ -1,10 +1,19 @@
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { ThemeProvider } from './context/ThemeContext'
-import App from './App'
-import './styles/base.css'
+// React
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// Librerías
+import { BrowserRouter } from "react-router-dom";
+
+// Contextos
+import { ThemeProvider } from "./context/ThemeContext";
+
+// App
+import App from "./App";
+
+// Estilos
+import "./styles/base.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <BrowserRouter>
       <App />

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap");
 
 :root {
   /* Fonts */
-  --font-heading: 'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --font-body: 'Roboto Slab', Georgia, serif;
+  --font-heading: "Montserrat", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-body: "Roboto Slab", Georgia, serif;
 
   /* Success colors */
   --success-light: #4caf50;
@@ -89,14 +89,17 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
 }
 
-p, span, li{
+p,
+span,
+li {
   font-family: var(--font-body);
 }
-
 
 a {
   text-decoration: none;

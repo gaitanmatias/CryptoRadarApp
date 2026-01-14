@@ -1,13 +1,14 @@
-.crypto-detail-container, .crypto-detail-container.loader-container {
+.crypto-detail-container,
+.crypto-detail-container.loader-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
   gap: 25px;
-  
+
   width: 100%;
   padding: 10px;
-  
+
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -28,7 +29,7 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--paragraph-size);
-  
+
   min-width: 200px;
   padding: 12px;
   border-radius: 5px;
@@ -57,7 +58,8 @@
   text-transform: uppercase;
 }
 
-.crypto-detail-header, .crypto-detail-title {
+.crypto-detail-header,
+.crypto-detail-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +80,7 @@
   object-fit: cover;
 }
 
-.crypto-detail-title{
+.crypto-detail-title {
   font-size: var(--subtitle-size);
   font-weight: 600;
 }
@@ -96,7 +98,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0px;
-  
+
   width: 100%;
 }
 
@@ -107,12 +109,11 @@
 
   width: 100%;
   padding: 15px 5px;
-  
+
   font-family: var(--font-heading);
   text-align: center;
-  
-  border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent 50%);
 
+  border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent 50%);
 }
 
 .crypto-detail-price {
@@ -134,31 +135,31 @@
   color: var(--error-main);
 }
 
-.crypto-detail-error{
+.crypto-detail-error {
   justify-content: center;
 }
 
-.crypto-detail-error--title{
+.crypto-detail-error--title {
   font-size: var(--title-size);
   color: var(--accent);
 }
-.crypto-detail-error--text{
+.crypto-detail-error--text {
   font-size: var(--subtitle-size);
   color: var(--foreground);
 }
 
 @media screen and (max-width: 350px) {
-  .detail{
+  .detail {
     flex-direction: column;
   }
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 720px) {
   .crypto-detail-info-container {
     width: 100%;
     max-width: 800px;
   }
-  
+
   .crypto-detail-header {
     flex-direction: row;
     align-items: center;
@@ -166,7 +167,7 @@
 
     width: 100%;
   }
-  
+
   .crypto-detail-title {
     flex-direction: row;
     align-items: center;
@@ -174,9 +175,9 @@
   }
 
   .detail {
-   justify-content: start;
+    justify-content: start;
 
-   border: none;
+    border: none;
   }
 
   .crypto-details-title {

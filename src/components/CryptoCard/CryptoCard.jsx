@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import "./CryptoCard.css";
 
 const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
@@ -12,7 +13,6 @@ const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
     }).format(price);
   };
 
-
   const formatPriceChange = (change) => {
     if (Math.abs(change) < 0.01) return "<0.01%";
     return change.toFixed(2) + "%";
@@ -21,10 +21,13 @@ const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
   return (
     <Link to={`/crypto/${id}`}>
       <div className="crypto-card">
-        <div className="crypto-header" title={name  + " - " + symbol.toUpperCase()}>
+        <div
+          className="crypto-header"
+          title={name + " - " + symbol.toUpperCase()}
+        >
           <img src={image} alt={name} className="crypto-image" />
           <h3 className="crypto-name">
-            ({symbol.toUpperCase()}) - {name} 
+            ({symbol.toUpperCase()}) - {name}
           </h3>
         </div>
         <p className="crypto-price">${formatPrice(price)}</p>

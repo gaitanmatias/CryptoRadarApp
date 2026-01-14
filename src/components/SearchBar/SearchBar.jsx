@@ -1,6 +1,11 @@
+// React
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Icons from "../../icons/icons"; 
+
+// Iconos
+import Icons from "../../icons/icons";
+
+// Estilos
 import "./SearchBar.css";
 
 const SearchBar = ({ cryptos = [] }) => {
@@ -27,9 +32,7 @@ const SearchBar = ({ cryptos = [] }) => {
   );
 
   const matchSymbol = cryptos.filter(
-    (c) =>
-      c.symbol.toLowerCase().includes(lowerTerm) &&
-      !matchBoth.includes(c)
+    (c) => c.symbol.toLowerCase().includes(lowerTerm) && !matchBoth.includes(c)
   );
 
   const matchName = cryptos.filter(
@@ -72,12 +75,13 @@ const SearchBar = ({ cryptos = [] }) => {
 
   return (
     <div className="search-bar" ref={wrapperRef}>
-      <form className="search-bar__input-wrapper"
+      <form
+        className="search-bar__input-wrapper"
         onSubmit={(e) => {
           e.preventDefault();
-          handleSearch()
-        }}>
-        
+          handleSearch();
+        }}
+      >
         <Icons.Search className="search-bar__icon" />
         <input
           type="text"
@@ -96,9 +100,11 @@ const SearchBar = ({ cryptos = [] }) => {
           title="Solo se permiten letras"
         />
         {searchTerm && (
-          <Icons.Close className="search-bar__clear-btn"
-          onClick={clearSearch}
-          aria-label="Limpiar búsqueda" />
+          <Icons.Close
+            className="search-bar__clear-btn"
+            onClick={clearSearch}
+            aria-label="Limpiar búsqueda"
+          />
         )}
       </form>
 
@@ -114,7 +120,11 @@ const SearchBar = ({ cryptos = [] }) => {
                   navigate(`/crypto/${crypto.id}`);
                 }}
               >
-                <img src={crypto.image} alt={crypto.name} className="crypto-image" />
+                <img
+                  src={crypto.image}
+                  alt={crypto.name}
+                  className="crypto-image"
+                />
                 <p className="crypto-info">
                   ({crypto.symbol.toUpperCase()}) - {crypto.name}
                 </p>

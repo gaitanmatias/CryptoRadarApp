@@ -1,5 +1,6 @@
 import { useTheme } from "../../context/ThemeContext";
-import { FaRegMoon, FaSun  } from "react-icons/fa";
+
+import { FaRegMoon, FaSun } from "react-icons/fa";
 
 const ThemeToggleButton = () => {
   const { theme, toggleTheme } = useTheme();

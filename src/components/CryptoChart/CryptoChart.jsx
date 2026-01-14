@@ -1,3 +1,7 @@
+// React
+import { useEffect, useState } from "react";
+
+// Librerías
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -8,11 +12,21 @@ import {
   Tooltip,
   Filler,
 } from "chart.js";
-import { useEffect, useState } from "react";
-import "./CryptoChart.css"
+
+// Servicios
 import { getCryptoChart } from "../../services/cryptoService";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Filler);
+// Estilos
+import "./CryptoChart.css";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Filler
+);
 
 const formatDate = (timestamp, timeframe) => {
   const date = new Date(timestamp);
@@ -21,7 +35,10 @@ const formatDate = (timestamp, timeframe) => {
   } else if (timeframe === "7") {
     return date.toLocaleDateString("es-ES", { weekday: "short" });
   } else {
-    return date.toLocaleDateString("es-ES", { month: "short", year: "2-digit" });
+    return date.toLocaleDateString("es-ES", {
+      month: "short",
+      year: "2-digit",
+    });
   }
 };
 
@@ -104,13 +121,22 @@ const CryptoChart = ({ coinId }) => {
   return (
     <div className="crypto-chart">
       <div className="crypto-chart__buttons">
-        <button onClick={() => setTimeframe("1")} className={timeframe === "1" ? "active" : ""}>
+        <button
+          onClick={() => setTimeframe("1")}
+          className={timeframe === "1" ? "active" : ""}
+        >
           1 Día
         </button>
-        <button onClick={() => setTimeframe("7")} className={timeframe === "7" ? "active" : ""}>
+        <button
+          onClick={() => setTimeframe("7")}
+          className={timeframe === "7" ? "active" : ""}
+        >
           7 Días
         </button>
-        <button onClick={() => setTimeframe("365")} className={timeframe === "365" ? "active" : ""}>
+        <button
+          onClick={() => setTimeframe("365")}
+          className={timeframe === "365" ? "active" : ""}
+        >
           1 Año
         </button>
       </div>
