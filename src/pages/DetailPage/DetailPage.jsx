@@ -4,6 +4,7 @@ import "./DetailPage.css";
 import CryptoChart from "../../components/CryptoChart/CryptoChart";
 import Loader from '../../components/Loader/Loader'
 import { isFavorite, addFavorite, removeFavorite } from "../../services/favoritesService";
+import { getCryptoById } from "../../services/cryptoService";
 
 const DetailPage = () => {
   const { id: coinId } = useParams();
@@ -19,17 +20,11 @@ const DetailPage = () => {
 
   useEffect(() => {
     const fetchCrypto = async () => {
-      try {
-        const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`);
-        const data = await res.json();
-        setCrypto(data);
-      } catch (error) {
-        console.error("Error al cargar los datos de la criptomoneda:", error);
-      } finally {
-        setLoading(false);
-      }
+      const data = await getCryptoById(coinId);
+      setCrypto(data);
+      setLoading(false);
     };
-
+    
     fetchCrypto();
   }, [coinId]);
 

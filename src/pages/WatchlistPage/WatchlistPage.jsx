@@ -4,6 +4,7 @@ import "./WatchlistPage.css";
 import { getFavorites } from "../../services/favoritesService";
 import CryptoList from "../../components/CryptoList/CryptoList";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { getCryptosByIds } from "../../services/cryptoService";
 
 function WatchlistPage() {
   const [coins, setCoins] = useState([]);
@@ -12,24 +13,9 @@ function WatchlistPage() {
   useEffect(() => {
     const loadFavorites = async () => {
       const favorites = getFavorites();
-
-      if (favorites.length === 0) {
-        setCoins([]);
-        setLoading(false);
-        return;
-      }
-
-      try {
-        const res = await fetch(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${favorites.join(",")}`
-        );
-        const data = await res.json();
-        setCoins(data);
-      } catch (error) {
-        console.error("Error al cargar favoritos:", error);
-      } finally {
-        setLoading(false);
-      }
+      const data = await getCryptosByIds(favorites);
+      setCoins(data);
+      setLoading(false);
     };
 
     loadFavorites();

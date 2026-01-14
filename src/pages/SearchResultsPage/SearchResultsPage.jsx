@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CryptoList from "../../components/CryptoList/CryptoList";
 import "./SearchResultsPage.css";
 import Loader from '../../components/Loader/Loader'
-
+import { searchCryptos } from "../../services/cryptoService";
 
 const SearchResults = () => {
   const { searchTerm } = useParams();
@@ -12,26 +12,10 @@ const SearchResults = () => {
 
   useEffect(() => {
     const fetchSearchResults = async () => {
-      try {
-        const res = await fetch(`https://api.coingecko.com/api/v3/search?query=${searchTerm}`);
-        const data = await res.json();
-
-        const ids = data.coins.map((coin) => coin.id).join(",");
-        if (!ids) {
-          setResults([]);
-          return;
-        } 
-
-        const marketRes = await fetch(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`
-        );
-        const marketData = await marketRes.json();
-        setResults(marketData);
-      } catch (error) {
-        console.error("Error al buscar:", error);
-      } finally {
-        setLoading(false);
-      }
+      setLoading(true);
+      const data = await searchCryptos(searchTerm);
+      setResults(data);
+      setLoading(false);
     };
 
     fetchSearchResults();

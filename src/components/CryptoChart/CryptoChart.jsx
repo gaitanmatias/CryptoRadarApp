@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { useEffect, useState } from "react";
 import "./CryptoChart.css"
+import { getCryptoChart } from "../../services/cryptoService";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Filler);
 
@@ -31,18 +32,10 @@ const CryptoChart = ({ coinId }) => {
 
   useEffect(() => {
     const fetchChart = async () => {
-      try {
-        setLoading(true);
-        const res = await fetch(
-          `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${timeframe}`
-        );
-        const data = await res.json();
-        setChartData(data.prices);
-      } catch (error) {
-        console.error("Error al cargar gráfico:", error);
-      } finally {
-        setLoading(false);
-      }
+      setLoading(true);
+      const prices = await getCryptoChart(coinId, timeframe);
+      setChartData(prices);
+      setLoading(false);
     };
 
     fetchChart();
