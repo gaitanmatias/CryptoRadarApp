@@ -3,18 +3,24 @@ import { useEffect, useState } from "react";
 import "./DetailPage.css";
 import CryptoChart from "../../components/CryptoChart/CryptoChart";
 import Loader from '../../components/Loader/Loader'
+import { isFavorite, addFavorite, removeFavorite } from "../../services/favoritesService";
 
 const DetailPage = () => {
-  const { id } = useParams();
+  const { id: coinId } = useParams();
   const [crypto, setCrypto] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const priceChangeClass = crypto?.market_data.price_change_percentage_24h >= 0 ? " positive" : " negative";
 
+  const [favorite, setFavorite] = useState(false);
+  useEffect(() => {
+    setFavorite(isFavorite(coinId));
+  }, [coinId]);
+
   useEffect(() => {
     const fetchCrypto = async () => {
       try {
-        const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
+        const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`);
         const data = await res.json();
         setCrypto(data);
       } catch (error) {
@@ -25,7 +31,7 @@ const DetailPage = () => {
     };
 
     fetchCrypto();
-  }, [id]);
+  }, [coinId]);
 
   if (loading) return (
     <main className="crypto-detail-container">
@@ -42,8 +48,22 @@ const DetailPage = () => {
 
   return (
     <main className="crypto-detail-container">
+      <section className="crypto-detail--favorite-container">
+        <button className="crypto-detail--favorite-btn"
+          onClick={() => {
+            if (favorite) {
+              removeFavorite(coinId);
+              setFavorite(false);
+            } else {
+              addFavorite(coinId);
+              setFavorite(true);
+            }
+          }}
+        >
+          {favorite ? "Eliminar de favoritos" : "Agregar a favoritos"}
+        </button>
+      </section>
       <h1 className="crypto-detail-name">{crypto.name}</h1>
-      
       <div className="crypto-detail-info-container">
         <div className="crypto-detail-header">
           <img className="crypto-detail-image" src={crypto.image.large} alt={crypto.name}/>
@@ -53,7 +73,7 @@ const DetailPage = () => {
         <div className="crypto-details">
           <p className="crypto-detail-price detail">
             <span className="crypto-details-title">Precio actual:</span>
-             ${crypto.market_data.current_price.usd.toLocaleString()}
+            ${crypto.market_data.current_price.usd.toLocaleString()}
           </p>
           <p className={`crypto-detail-change detail${priceChangeClass}`}>
             <span className="crypto-details-title">Cambio 24h:</span>
@@ -74,7 +94,7 @@ const DetailPage = () => {
           </p>
         </div>
 
-        <CryptoChart coinId={id} className="crypto-detail-chart" />
+        <CryptoChart coinId={coinId} className="crypto-detail-chart" />
       </div>
     </main>
   );

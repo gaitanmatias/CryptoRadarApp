@@ -12,6 +12,33 @@
   color: var(--foreground);
 }
 
+.crypto-detail--favorite-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  margin-bottom: -15px;
+}
+
+.crypto-detail--favorite-btn {
+  background: var(--accent);
+  color: color-mix(in srgb, var(--accent-foreground) 100%, var(--accent) 0%);
+
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--paragraph-size);
+  
+  min-width: 200px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.crypto-detail--favorite-btn:hover {
+  background: color-mix(in srgb, var(--accent) 80%, var(--primary) 20%);
+  color: color-mix(in srgb, var(--accent-foreground) 100%, var(--accent) 0%);
+}
+
 .crypto-detail-info-container {
   display: flex;
   flex-direction: column;
