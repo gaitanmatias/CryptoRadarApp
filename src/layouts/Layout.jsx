@@ -2,6 +2,7 @@
 import { Outlet } from "react-router-dom";
 
 // Componentes
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 
@@ -11,6 +12,8 @@ import "./Layout.css";
 function Layout() {
   return (
     <div className="layout">
+      <ScrollToTop />
+      
       <NavBar />
       <Outlet className="layout__outlet" />
       <Footer />
