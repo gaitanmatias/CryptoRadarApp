@@ -20,18 +20,18 @@ const CryptoCard = ({ id, name, image, symbol, price, priceChange }) => {
 
   return (
     <Link to={`/crypto/${id}`}>
-      <div className="crypto-card">
+      <div className="crypto-card__container">
         <div
-          className="crypto-header"
+          className="crypto-card__header"
           title={name + " - " + symbol.toUpperCase()}
         >
-          <img src={image} alt={name} className="crypto-image" />
-          <h3 className="crypto-name">
+          <img src={image} alt={name} className="crypto-card__image" />
+          <h3 className="crypto-card__name">
             ({symbol.toUpperCase()}) - {name}
           </h3>
         </div>
-        <p className="crypto-price">${formatPrice(price)}</p>
-        <p className={`crypto-price-change ${priceChangeClass}`}>
+        <p className="crypto-card__price">${formatPrice(price)}</p>
+        <p className={`crypto-card__price-change ${priceChangeClass}`}>
           {priceChange >= 0 ? "+" : ""}
           {formatPriceChange(priceChange)}
         </p>

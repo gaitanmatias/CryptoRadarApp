@@ -141,7 +141,7 @@ const CryptoChart = ({ coinId }) => {
         </button>
       </div>
 
-      <div className="crypto-chart__container crypto-detail-chart">
+      <div className="crypto-chart__chart">
         {loading ? (
           <p>Cargando gráfico...</p>
         ) : (

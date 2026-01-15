@@ -41,7 +41,7 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.crypto-detail-chart {
+.crypto-chart__chart {
   display: flex;
   justify-content: center;
 

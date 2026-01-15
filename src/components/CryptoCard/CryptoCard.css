@@ -1,4 +1,4 @@
-.crypto-card {
+.crypto-card__container {
   display: grid;
   grid-template-columns: 1fr 70px 60px;
   align-items: center;
@@ -11,11 +11,11 @@
   border-top: 1px solid color-mix(in srgb, var(--accent) 75%, transparent 25%);
 }
 
-.crypto-card:hover {
+.crypto-card__container:hover {
   background-color: color-mix(in srgb, var(--accent) 25%, transparent 75%);
 }
 
-.crypto-header {
+.crypto-card__header {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -23,13 +23,13 @@
   max-width: 90%;
 }
 
-.crypto-image {
+.crypto-card__image {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-.crypto-name {
+.crypto-card__name {
   max-width: 140px;
 
   font-size: var(--info-size);
@@ -41,7 +41,7 @@
   vertical-align: middle;
 }
 
-.crypto-price {
+.crypto-card__price {
   font-size: var(--paragraph-size);
   font-weight: 400;
   color: var(--text-color);
@@ -49,14 +49,14 @@
   margin-right: auto;
 }
 
-.crypto-price-change {
+.crypto-card__price-change {
   font-size: var(--info-size);
   font-weight: 500;
   font-family: var(--font-heading);
   text-align: center;
 }
 
-.crypto-price-change.positive {
+.crypto-card__price-change.positive {
   color: var(--success-main);
 }
 
@@ -65,11 +65,11 @@
 }
 
 @media screen and (min-width: 720px) {
-  .crypto-card {
+  .crypto-card__container {
     grid-template-columns: 1fr 100px 100px;
   }
 
-  .crypto-name {
+  .crypto-card__name {
     max-width: 350px;
   }
 }

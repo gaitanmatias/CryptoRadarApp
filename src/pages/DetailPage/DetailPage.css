@@ -1,5 +1,4 @@
-.crypto-detail-container,
-.crypto-detail-container.loader-container {
+.detail-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,13 +6,25 @@
   gap: 25px;
 
   width: 100%;
+
+  background-color: var(--background);
+}
+
+.detail-page__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  width: 100%;
+  max-width: 1000px;
   padding: 10px;
 
   background-color: var(--background);
   color: var(--foreground);
 }
 
-.crypto-detail--favorite-container {
+.detail-page__favorite {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -22,12 +33,12 @@
   margin-bottom: -15px;
 }
 
-.crypto-detail--favorite-btn {
-  background: var(--accent);
-  color: color-mix(in srgb, var(--accent-foreground) 100%, var(--accent) 0%);
+.detail-page__favorite-btn {
+  background: var(--primary);
+  color: color-mix(in srgb, var(--primary-foreground) 100%, var(--primary) 0%);
 
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 500;
   font-size: var(--paragraph-size);
 
   min-width: 200px;
@@ -35,12 +46,12 @@
   border-radius: 5px;
 }
 
-.crypto-detail--favorite-btn:hover {
-  background: color-mix(in srgb, var(--accent) 80%, var(--primary) 20%);
-  color: color-mix(in srgb, var(--accent-foreground) 100%, var(--accent) 0%);
+.detail-page__favorite-btn:hover {
+  background: color-mix(in srgb, var(--primary) 75%, var(--accent) 25%);
+  color: color-mix(in srgb, var(--primary-foreground) 100%, var(--primary) 0%);
 }
 
-.crypto-detail-info-container {
+.detail-page__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +61,9 @@
   padding: 10px;
 }
 
-.crypto-detail-name {
+.detail-page__title {
+  width: 100%;
+
   font-size: var(--title-size);
   font-weight: 800;
   text-align: center;
@@ -58,19 +71,19 @@
   text-transform: uppercase;
 }
 
-.crypto-detail-header,
-.crypto-detail-title {
+.detail-page__header,
+.detail-page__name {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.crypto-detail-header {
+.detail-page__header {
   gap: 10px;
 }
 
-.crypto-detail-image {
+.detail-page__image {
   width: 105px;
   height: 105px;
 
@@ -80,12 +93,12 @@
   object-fit: cover;
 }
 
-.crypto-detail-title {
+.detail-page__name {
   font-size: var(--subtitle-size);
   font-weight: 600;
 }
 
-.crypto-detail-symbol {
+.detail-page__symbol {
   font-size: var(--subtitle-size);
   color: var(--secondary-foreground);
   font-weight: 400;
@@ -93,7 +106,7 @@
   text-transform: uppercase;
 }
 
-.crypto-details {
+.detail-page__info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +115,7 @@
   width: 100%;
 }
 
-.detail {
+.detail-page__info-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,51 +129,40 @@
   border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent 50%);
 }
 
-.crypto-detail-price {
+.detail-page__price {
   font-size: var(--subtitle-size);
 }
 
-.crypto-details-title {
+.detail-page__info-label {
   font-size: var(--paragraph-size);
   font-family: var(--font-heading);
   color: color-mix(in srgb, var(--primary) 50%, var(--foreground) 50%);
   font-weight: 600;
 }
 
-.crypto-detail-change.positive {
+.detail-page__change.positive {
   color: var(--success-main);
 }
 
-.crypto-detail-change.negative {
+.detail-page__change.negative {
   color: var(--error-main);
 }
 
-.crypto-detail-error {
+.detail-page__error {
   justify-content: center;
 }
 
-.crypto-detail-error--title {
+.detail-page__error--title {
   font-size: var(--title-size);
   color: var(--accent);
 }
-.crypto-detail-error--text {
+.detail-page__error--text {
   font-size: var(--subtitle-size);
   color: var(--foreground);
 }
 
-@media screen and (max-width: 350px) {
-  .detail {
-    flex-direction: column;
-  }
-}
-
 @media screen and (min-width: 720px) {
-  .crypto-detail-info-container {
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .crypto-detail-header {
+  .detail-page__header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -168,20 +170,15 @@
     width: 100%;
   }
 
-  .crypto-detail-title {
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .detail {
+  .detail-page__content {
     justify-content: start;
 
     border: none;
   }
 
-  .crypto-details-title {
-    width: 60%;
+  .detail-page__title {
+    padding-left: 10px;
+
     text-align: left;
   }
 }

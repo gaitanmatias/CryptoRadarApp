@@ -9,12 +9,12 @@
   text-align: center;
 }
 
-.footer-text {
+.footer__text {
   font-size: var(--info-size);
   font-weight: 300;
 }
 
-.footer-link {
+.footer__link {
   color: color-mix(in srgb, var(--primary) 75%, var(--foreground) 25%);
   font-family: var(--font-heading);
   font-weight: 700;
@@ -22,7 +22,7 @@
     color-mix(in srgb, var(--primary) 90%, var(--primary-foreground) 10%);
 }
 
-.footer-brand {
+.footer__brand {
   font-family: var(--font-heading);
   font-weight: 700;
   color: color-mix(

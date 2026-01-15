@@ -13,8 +13,8 @@
   color: var(--foreground);
 }
 
-.hero,
-.crypto-section {
+.home-page__hero,
+.home-page__crypto {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -23,7 +23,7 @@
   max-width: 800px;
 }
 
-.hero-title {
+.home-page__title {
   max-width: 600px;
 
   font-size: var(--title-size);
@@ -31,7 +31,7 @@
   color: var(--foreground);
 }
 
-.slogan {
+.home-page__slogan {
   max-width: 500px;
 
   font-size: var(--info-size);
@@ -41,7 +41,7 @@
   line-height: 200%;
 }
 
-.crypto-description {
+.home-page__crypto-description {
   max-width: 90%;
 
   font-size: var(--subtitle-size);
@@ -58,19 +58,19 @@
     padding: 50px;
   }
 
-  .hero {
+  .home-page__hero {
     gap: 25px;
   }
 
-  .hero-title {
+  .home-page__title {
     max-width: 800px;
   }
 
-  .slogan {
+  .home-page__slogan {
     max-width: 700px;
   }
 
-  .crypto-description {
+  .home-page__crypto-description {
     width: 65%;
   }
 }

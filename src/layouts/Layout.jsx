@@ -10,9 +10,9 @@ import "./Layout.css";
 
 function Layout() {
   return (
-    <div className="layout-container">
+    <div className="layout">
       <NavBar />
-      <Outlet className="outlet" />
+      <Outlet className="layout__outlet" />
       <Footer />
     </div>
   );

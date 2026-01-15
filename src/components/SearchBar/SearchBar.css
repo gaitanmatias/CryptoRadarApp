@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.search-bar__input-wrapper {
+.search-bar__form {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -19,7 +19,7 @@
   border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent 50%);
 }
 
-.search-bar__input-wrapper:focus-within {
+.search-bar__form:focus-within {
   border: 1px solid var(--accent);
 }
 
@@ -28,7 +28,7 @@
   color: var(--muted-foreground);
 }
 
-.search-bar__input-wrapper:focus-within > .search-bar__icon {
+.search-bar__form:focus-within > .search-bar__icon {
   color: var(--foreground);
 }
 
@@ -46,7 +46,7 @@
   color: var(--muted-foreground);
 }
 
-.search-bar__clear-btn {
+.search-bar__clear {
   width: 24px;
 
   font-size: 1.2rem;
@@ -87,7 +87,7 @@
   width: 8px;
 }
 
-.search-bar__dropdown-item {
+.search-bar__item {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -105,7 +105,7 @@
   transition: background-color 0.2s ease;
 }
 
-.crypto-info {
+.search-bar__item--info {
   display: inline-block;
 
   font-family: var(--font-heading);
@@ -116,11 +116,11 @@
   vertical-align: middle;
 }
 
-.search-bar__dropdown-item:hover {
+.search-bar__item:hover {
   background-color: color-mix(in srgb, var(--accent) 25%, transparent 75%);
 }
 
-.search-bar__dropdown-item--search {
+.search-bar__item--search {
   font-style: italic;
   font-weight: 600;
 }

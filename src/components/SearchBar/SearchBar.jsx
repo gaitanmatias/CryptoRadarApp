@@ -76,7 +76,7 @@ const SearchBar = ({ cryptos = [] }) => {
   return (
     <div className="search-bar" ref={wrapperRef}>
       <form
-        className="search-bar__input-wrapper"
+        className="search-bar__form"
         onSubmit={(e) => {
           e.preventDefault();
           handleSearch();
@@ -101,7 +101,7 @@ const SearchBar = ({ cryptos = [] }) => {
         />
         {searchTerm && (
           <Icons.Close
-            className="search-bar__clear-btn"
+            className="search-bar__clear"
             onClick={clearSearch}
             aria-label="Limpiar búsqueda"
           />
@@ -114,7 +114,7 @@ const SearchBar = ({ cryptos = [] }) => {
             filteredCryptos.map((crypto) => (
               <li
                 key={crypto.id}
-                className="search-bar__dropdown-item"
+                className="search-bar__item"
                 onClick={() => {
                   setShowDropdown(false);
                   navigate(`/crypto/${crypto.id}`);
@@ -123,16 +123,16 @@ const SearchBar = ({ cryptos = [] }) => {
                 <img
                   src={crypto.image}
                   alt={crypto.name}
-                  className="crypto-image"
+                  className="search-bar__item--image"
                 />
-                <p className="crypto-info">
+                <p className="search-bar__item--info">
                   ({crypto.symbol.toUpperCase()}) - {crypto.name}
                 </p>
               </li>
             ))
           ) : (
             <li
-              className="search-bar__dropdown-item search-bar__dropdown-item--search"
+              className="search-bar__item search-bar__item--search"
               onClick={handleSearch}
             >
               Buscar "{searchTerm}"

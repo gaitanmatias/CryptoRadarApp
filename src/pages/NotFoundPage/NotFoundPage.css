@@ -12,7 +12,7 @@
   background-color: var(--background);
 }
 
-.not-found-brand {
+.not-found-page__brand {
   position: fixed;
   top: 15px;
   left: 20px;
@@ -25,20 +25,20 @@
   border-bottom: 1px solid var(--muted-foreground);
 }
 
-.not-found-title {
+.not-found-page__title {
   font-family: var(--font-heading);
   font-size: var(--title-size);
   line-height: 100%;
   color: var(--foreground);
 }
 
-.not-found-message {
+.not-found-page__message {
   font-family: var(--font-body);
   font-size: var(--paragraph-size);
   color: var(--muted-foreground);
 }
 
-.not-found-link {
+.not-found-page__link {
   margin-top: 25px;
   padding: 15px 20px;
   border-radius: 10px;
@@ -51,7 +51,7 @@
   background-color: var(--primary);
 }
 
-.not-found-link:hover {
+.not-found-page__link:hover {
   background-color: color-mix(
     in srgb,
     var(--primary) 80%,

@@ -1,4 +1,4 @@
-.layout-container {
+.layout {
   display: flex;
   flex-direction: column;
 
@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 720px) {
-  .layout-container {
+  .layout {
     padding-top: 65px;
   }
 }

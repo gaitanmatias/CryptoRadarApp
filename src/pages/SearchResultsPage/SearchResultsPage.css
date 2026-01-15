@@ -64,14 +64,14 @@
 }
 
 .search-results__loading,
-.search-results__empty {
+.search-results-page__body--empty {
   font-size: var(--title-size);
   font-weight: 500;
   color: var(--muted-foreground);
   font-family: var(--font-heading);
 }
 
-.search-results__body .crypto-list {
+.search-results-page__crypto-list {
   padding: 0;
 }
 

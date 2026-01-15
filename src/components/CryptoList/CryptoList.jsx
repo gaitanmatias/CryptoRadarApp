@@ -6,10 +6,10 @@ import "./CryptoList.css";
 const CryptoList = ({ cryptos, loading }) => {
   return (
     <div className="crypto-list">
-      <div className="crypto-list-header">
-        <span className="crypto-list-header-title">Criptomoneda</span>
-        <span className="crypto-list-header-title">Precio</span>
-        <span className="crypto-list-header-title">Cambio</span>
+      <div className="crypto-list__header">
+        <span className="crypto-list__title">Criptomoneda</span>
+        <span className="crypto-list__title">Precio</span>
+        <span className="crypto-list__title">Cambio</span>
       </div>
 
       {loading ? (

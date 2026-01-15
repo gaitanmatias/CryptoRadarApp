@@ -6,27 +6,27 @@ import "./NavBar.css";
 
 export default function NavBar() {
   const getNavLinkClass = ({ isActive }) =>
-    `nav-link ${isActive ? "nav-link-active" : ""}`;
+    `navbar__link ${isActive ? "navbar__link--active" : ""}`;
 
   return (
-    <header className="navbar-header">
-      <nav className="navbar">
-        <NavLink to="/" className="navbar-brand">
+    <header className="navbar__header">
+      <nav className="navbar__container">
+        <NavLink to="/" className="navbar__brand">
           CryptoRadar
         </NavLink>
 
-        <ul className="navbar-nav">
-          <li className="nav-item">
+        <ul className="navbar__list">
+          <li className="navbar__item">
             <NavLink to="/" className={getNavLinkClass}>
               Inicio
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="navbar__item">
             <NavLink to="/watchlist" className={getNavLinkClass}>
               Favoritos
             </NavLink>
           </li>
-          <ThemeToggleButton />
+          <ThemeToggleButton className="navbar__theme-toggle-button"/>
         </ul>
       </nav>
     </header>

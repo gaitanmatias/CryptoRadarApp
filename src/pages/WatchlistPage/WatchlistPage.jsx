@@ -30,19 +30,21 @@ function WatchlistPage() {
 
   if (loading) {
     return (
-      <main className="watchlist-container">
+      <main className="watchlist-page">
         <Loader />
       </main>
     );
   }
 
   return (
-    <main className="watchlist-container">
-      <h1 className="watchlist-title">
+    <main className="watchlist-page">
+      <h1 className="watchlist-page__title">
         Accedé a tus criptomonedas favoritas más rápido
       </h1>
-      <SearchBar cryptos={coins} />
-      <CryptoList loading={false} cryptos={coins} />
+      <section className="watchlist-page__content">
+        <SearchBar cryptos={coins} />
+        <CryptoList loading={false} cryptos={coins} />
+      </section>
     </main>
   );
 }

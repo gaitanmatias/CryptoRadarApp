@@ -4,13 +4,12 @@
   border-radius: 10px;
 
   width: 100%;
-  max-width: 600px;
 
   border: 1px solid var(--accent);
   overflow: hidden;
 }
 
-.crypto-list-header {
+.crypto-list__header {
   display: grid;
   grid-template-columns: 1fr 70px 60px;
   align-items: center;
@@ -21,14 +20,14 @@
   background-color: color-mix(in srgb, var(--secondary) 25%, transparent 75%);
 }
 
-.crypto-list-header-title {
+.crypto-list__title {
   font-family: var(--font-heading);
   font-size: var(--paragraph-size);
   font-weight: 400;
   color: var(--text-color-main);
 }
 
-.crypto-list-header-title:last-of-type {
+.crypto-list__title:last-of-type {
   text-align: center;
 }
 
@@ -37,7 +36,7 @@
     max-width: none;
   }
 
-  .crypto-list-header {
+  .crypto-list__header {
     grid-template-columns: 1fr 100px 100px;
   }
 }
