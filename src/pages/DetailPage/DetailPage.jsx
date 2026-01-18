@@ -109,7 +109,7 @@ const DetailPage = () => {
             {crypto.market_data.price_change_percentage_24h > 0
               ? "+"
               : crypto.market_data.price_change_percentage_24h < 0
-              ? "-"
+              ? ""
               : ""}
             {crypto.market_data.price_change_percentage_24h.toFixed(2)}%
           </p>

@@ -105,6 +105,12 @@
   transition: background-color 0.2s ease;
 }
 
+.search-bar__item--image {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .search-bar__item--info {
   display: inline-block;
 
