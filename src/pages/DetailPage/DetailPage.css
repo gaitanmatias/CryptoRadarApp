@@ -34,16 +34,19 @@
 }
 
 .detail-page__favorite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: var(--primary);
   color: color-mix(in srgb, var(--primary-foreground) 100%, var(--primary) 0%);
 
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: var(--paragraph-size);
+  font-size: var(--subtitle-size);
 
-  min-width: 200px;
-  padding: 12px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px; 
 }
 
 .detail-page__favorite-btn:hover {

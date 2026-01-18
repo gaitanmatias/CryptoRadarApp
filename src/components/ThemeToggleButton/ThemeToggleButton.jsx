@@ -1,6 +1,6 @@
 import { useTheme } from "../../context/ThemeContext";
 
-import { FaRegMoon, FaSun } from "react-icons/fa";
+import Icons from "../../icons/icons";
 
 const ThemeToggleButton = ({ className = "" }) => {
   const { theme, toggleTheme } = useTheme();
@@ -9,9 +9,10 @@ const ThemeToggleButton = ({ className = "" }) => {
     <button
       onClick={toggleTheme}
       className={`theme-toggle-button ${className}`}
+      title={theme === "light" ? "Cambiar a tema oscuro" : "Cambiar a tema claro"}
       aria-label="Cambiar tema"
     >
-      {theme === "light" ? <FaRegMoon /> : <FaSun />}
+      {theme === "light" ? <Icons.Moon/> : <Icons.Sun/>}
     </button>
   );
 };

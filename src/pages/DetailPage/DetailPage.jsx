@@ -8,6 +8,9 @@ import { useParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import CryptoChart from "../../components/CryptoChart/CryptoChart";
 
+// Iconos
+import Icons from "../../icons/icons";
+
 // Servicios
 import { getCryptoById } from "../../services/cryptoService";
 import {
@@ -67,6 +70,7 @@ const DetailPage = () => {
         <section className="detail-page__favorite">
         <button
           className="detail-page__favorite-btn"
+          title={favorite ? "Eliminar de favoritos" : "Agregar a favoritos"}
           onClick={() => {
             if (favorite) {
               removeFavorite(coinId);
@@ -77,7 +81,7 @@ const DetailPage = () => {
             }
           }}
         >
-          {favorite ? "Eliminar de favoritos" : "Agregar a favoritos"}
+          {favorite ? <Icons.HeartBroken /> : <Icons.Heart/>}
         </button>
       </section>
 
