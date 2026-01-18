@@ -19,6 +19,9 @@ import {
   removeFavorite,
 } from "../../services/favoritesService";
 
+// Utils / Helpers
+import { showSuccess, showInfo } from "../../utils/toast";
+
 // Estilos
 import "./DetailPage.css";
 
@@ -74,9 +77,11 @@ const DetailPage = () => {
           onClick={() => {
             if (favorite) {
               removeFavorite(coinId);
+              showInfo("Criptomoneda eliminada de favoritos correctamente!");
               setFavorite(false);
             } else {
               addFavorite(coinId);
+              showSuccess("Criptomoneda agregada a favoritos correctamente!");
               setFavorite(true);
             }
           }}
