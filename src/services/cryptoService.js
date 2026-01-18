@@ -1,3 +1,5 @@
+import { handleApiError } from "../utils/apiErrorHandler";
+
 const API_URL = "https://api.coingecko.com/api/v3";
 
 const getCache = (key) => {
@@ -18,7 +20,10 @@ export const getTopCryptos = async () => {
     const res = await fetch(
       `${API_URL}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1`
     );
-    if (!res.ok) throw new Error("Error al obtener datos");
+    if (!res.ok) {
+      handleApiError(res.status);
+      throw new Error("Error al obtener datos");
+    }
 
     const data = await res.json();
     setCache(cacheKey, data);
@@ -36,7 +41,10 @@ export const getCryptoById = async (id) => {
 
   try {
     const res = await fetch(`${API_URL}/coins/${id}`);
-    if (!res.ok) throw new Error("Cripto no encontrada");
+    if (!res.ok) {
+      handleApiError(res.status);
+      throw new Error("Cripto no encontrada");
+    }
 
     const data = await res.json();
     setCache(cacheKey, data);
@@ -56,7 +64,11 @@ export const getCryptoChart = async (id, days) => {
     const res = await fetch(
       `${API_URL}/coins/${id}/market_chart?vs_currency=usd&days=${days}`
     );
-    if (!res.ok) throw new Error("Error al obtener gráfico");
+    if (!res.ok) {
+      handleApiError(res.status);
+      throw new Error("Error al obtener gráfico");
+    }
+    
     const data = await res.json();
     setCache(cacheKey, data.prices);
     return data.prices;
@@ -73,7 +85,11 @@ export const searchCryptos = async (query) => {
 
   try {
     const res = await fetch(`${API_URL}/search?query=${query}`);
-    if (!res.ok) throw new Error("Error en búsqueda");
+    if (!res.ok) {
+      handleApiError(res.status);
+      throw new Error("Error en búsqueda");
+    }
+
     const data = await res.json();
     const ids = data.coins.map((coin) => coin.id).join(",");
     if (!ids) return [];
@@ -102,7 +118,10 @@ export const getCryptosByIds = async (ids) => {
     const res = await fetch(
       `${API_URL}/coins/markets?vs_currency=usd&ids=${ids.join(",")}`
     );
-    if (!res.ok) throw new Error("Error al obtener favoritos");
+    if (!res.ok) {
+      handleApiError(res.status);
+      throw new Error("Error al obtener favoritos");
+    }
 
     const data = await res.json();
     setCache(cacheKey, data);
