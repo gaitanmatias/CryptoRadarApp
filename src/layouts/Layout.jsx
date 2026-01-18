@@ -1,5 +1,7 @@
 // Librerias
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Componentes
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
@@ -15,10 +17,12 @@ function Layout() {
     <div className="layout">
       <ScrollToTop />
       <PageTitleManager />
-      
+
       <NavBar />
       <Outlet className="layout__outlet" />
       <Footer />
+
+      <ToastContainer />
     </div>
   );
 }
