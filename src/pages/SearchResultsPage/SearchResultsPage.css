@@ -1,4 +1,4 @@
-.search-results {
+.search-results-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   color: var(--foreground);
 }
 
-.search-results__container {
+.search-results-page__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,29 +23,29 @@
   max-width: 700px;
 }
 
-.search-results__header {
+.search-results-page__header {
   max-width: 800px;
   padding: 10px;
 }
 
-.search-results__header-title {
+.search-results-page__title {
   font-size: var(--title-size);
 }
 
-.search-results__header-highlight {
+.search-results-page__title-highlight {
   font-family: var(--font-body);
   font-weight: 700;
   font-style: italic;
 }
 
-.search-results__header-description {
+.search-results-page__description {
   font-size: var(--paragraph-size);
   font-weight: 400;
   color: var(--muted-foreground);
   font-family: var(--font-heading);
 }
 
-.search-results__body {
+.search-results-page__body {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -54,7 +54,7 @@
   padding: 5px;
 }
 
-.search-results__body-title {
+.search-results-page__subtitle {
   padding: 0px 5px;
 
   font-size: var(--subtitle-size);
@@ -63,20 +63,20 @@
   font-family: var(--font-heading);
 }
 
-.search-results__loading,
-.search-results-page__body--empty {
+.search-results-page__loading,
+.search-results-page-page__body--empty {
   font-size: var(--title-size);
   font-weight: 500;
   color: var(--muted-foreground);
   font-family: var(--font-heading);
 }
 
-.search-results-page__crypto-list {
+.search-results-page-page__crypto-list {
   padding: 0;
 }
 
 @media screen and (min-width: 720px) {
-  .search-results__container {
+  .search-results-page__container {
     max-width: 600px;
   }
 }
