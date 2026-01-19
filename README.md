@@ -1,54 +1,110 @@
-# CryptoRadar App — Seguimiento y análisis de criptomonedas en tiempo real
+# CryptoRadar App - Seguimiento y análisis de criptomonedas en tiempo real
 
-App SPA en **React + Vite** para buscar y mostrar información de criptomonedas usando la API de CoinGecko. Incluye gráficos interactivos y diseño responsivo.
+CryptoRadar es una **aplicación web SPA** desarrollada con **React + Vite** que permite explorar, analizar y seguir criptomonedas en tiempo real utilizando la **API de CoinGecko**. La app ofrece gráficos interactivos, sistema de favoritos, modo claro/oscuro y una experiencia fluida y optimizada tanto en desktop como en mobile.
 
-🔗 [Ver demo online](https://cryptoradarapp.netlify.app/)
+🔗 Demo online: https://cryptoradarapp.netlify.app/
+
+---
+
+## 🖼️ Capturas de la aplicación
+
+### Home — Desktop (Dark Mode)
+![Home Desktop Dark](assets/screenshots/home-desktop-dark.webp)
+
+### Detalle de criptomoneda — Mobile (Light Mode)
+![Crypto Detail Mobile](assets/screenshots/detail-mobile-light.webp)
 
 ---
 
 ## ⚙️ Tecnologías Utilizadas
 
-El proyecto está desarrollado con **React** y gestionado mediante **React Router DOM** para un enrutamiento fluido en SPA. Para el diseño y estilos se usa **CSS3** con **Flexbox** y tipografías de **Google Fonts**. La aplicación consume datos en tiempo real de la **API de CoinGecko**. El entorno de desarrollo es **Vite**, que facilita una configuración rápida y liviana. Para gráficos interactivos se emplea **Chart.js** con su wrapper para React. Los íconos son de **React Icons**. El código se mantiene versionado con **Git** y **GitHub**, y el despliegue está alojado en **Netlify** para un acceso rápido y seguro.
+El proyecto es una aplicación frontend desarrollada en React, con foco en el rendimiento, la organización del código y una buena experiencia de usuario:
+
+- **React** — Biblioteca principal para la UI
+- **Vite** — Entorno de desarrollo rápido y liviano
+- **React Router DOM** — Navegación SPA y manejo de rutas
+- **CoinGecko API** — Datos de mercado de criptomonedas
+- **Chart.js** + **react-chartjs-2** — Gráficos históricos interactivos
+- **React Toastify** — Notificaciones visuales (toasts)
+- **React Icons** — Iconografía
+- **CSS3** — Estilos con enfoque responsive
+- **Web Storage API (sessionStorage)** — Cacheo de datos de la API
+- **Git & GitHub** — Control de versiones
+- **Netlify** — Deploy y hosting
 
 ---
 
 ## 🧩 Funcionalidades
 
-- 🎯 Mostrar criptomonedas más populares en el Home.
-- 🔍 Búsqueda filtrada con input controlado y autocompletado.
-- 📄 Página con listado de resultados tras una búsqueda.
-- 📊 Detalle de cada criptomoneda con gráficos (1 día, 7 días, 1 año).
-- 🎨 Gráficos estilizados con Chart.js.
-- 🔗 Enrutamiento con React Router DOM.
-- 📱 Diseño mobile responsive (320 px a 2000 px).
+### Funcionalidades principales
+
+- 📈 Visualización del **Top 10 de criptomonedas** por capitalización de mercado y cacheo del **Top 100** para la búsqueda dinámica.
+- 🔍 **Búsqueda de criptomonedas** con navegación a resultados.
+- 📄 **Página de detalle** individual por criptomoneda.
+- 📊 **Gráficos históricos de precios** (1 día, 7 días, 1 año).
+- ⭐ **Sistema de criptomonedas favoritas** persistido en el navegador.
+- 🌗 **Modo claro / oscuro**.
+- 🔔 **Notificaciones visuales (toasts)** para acciones del usuario y errores.
+- ⚠️ **Manejo de errores de API**, incluyendo aviso cuando se alcanza el límite de peticiones.
+- 🔗 Navegación fluida en una **SPA** sin recargas.
+- 📱 **Diseño responsive** optimizado para mobile y desktop.
 
 ---
 
-## 📁Estructura del proyecto
+## 🧠 Características técnicas destacadas
+
+- **Cacheo inteligente de datos** de la API en `sessionStorage` para:
+  - Reducir llamadas innecesarias a CoinGecko
+  - Mejorar tiempos de carga
+  - Optimizar la experiencia de usuario
+
+- **Manejo centralizado de errores de API**, permitiendo:
+  - Mostrar mensajes claros al usuario
+  - Detectar límites de peticiones
+  - Evitar estados inconsistentes en la UI
+
+- **Arquitectura modular**, separando:
+  - Componentes reutilizables
+  - Servicios de datos
+  - Utilidades comunes
+
+---
+
+## 📁 Estructura del proyecto
 
 ```
 /
 ├─ public/
-│   ├─ favicon.webp
-│   └─ _redirects
+│   └─ favicon.webp
 ├─ src/
 │   ├─ components/
 │   │   ├─ CryptoChart/
-│   │   ├─ SearchBar/
 │   │   ├─ CryptoList/
 │   │   ├─ CryptoCard/
-│   │   ├─ Footer/
+│   │   ├─ SearchBar/
 │   │   ├─ NavBar/
+│   │   ├─ Footer/
+│   │   ├─ ThemeToggleButton/
+│   │   ├─ PageTitleManager/
+│   │   ├─ ScrollToTop/
 │   │   └─ Loader/
+│   ├─ context/
+│   │   └─ ThemeContext.jsx/
 │   ├─ icons/
 │   ├─ layouts/
 │   ├─ pages/
 │   │   ├─ HomePage/
 │   │   ├─ DetailPage/
 │   │   ├─ SearchResultsPage/
+│   │   ├─ WatchlistPage/
 │   │   └─ NotFoundPage/
 │   ├─ services/
+│   │   ├─ favoriteService.js
 │   │   └─ cryptoService.js
+│   ├─ utils/
+│   │   ├─ toast.js
+│   │   ├─ apiErrorHandler.js
+│   │   └─ pageTitles.js
 │   ├─ styles/
 │   │   └─ base.css
 │   ├─ App.jsx
@@ -61,29 +117,9 @@ El proyecto está desarrollado con **React** y gestionado mediante **React Route
 
 ---
 
-## 📦 Librerías principales
-
-- React + React Router DOM
-- Vite
-- CoinGecko API
-- Chart.js + react-chartjs-2
-- react-icons
-
----
-
-## 🧩 Próximos pasos
-
-🔄 Próximas mejoras planificadas:
-🌗 Modo claro/oscuro usando useContext
-🌍 Alternar de idioma (inglés/español)
-⭐ Guardado de criptomonedas favoritas usando LocalStorage
-🧭 Implementar un modal de navegación para dispositivos móviles
-🧾 Actualizar dinámicamente el título de la página según el contenido
-
-Tengo en mente seguir sumándole mejoras. Me entusiasma poder seguir construyendo sobre esta base e incorporar nuevas funcionalidades en futuras versiones 🚧
-
----
-
 ## 👨‍💻 Autor
 
-Hecho por [Matías Gaitán](https://github.com/gaitanmatias).
+Desarrollado por **Matías Gaitán**  
+
+**GitHub**: https://github.com/gaitanmatias  
+**LinkedIn**: https://linkedin.com/in/gaitanmatias
