@@ -45,7 +45,7 @@ El proyecto es una aplicación frontend desarrollada en React, con foco en el re
 - ⭐ **Sistema de criptomonedas favoritas** persistido en el navegador.
 - 🌗 **Modo claro / oscuro**.
 - 🔔 **Notificaciones visuales (toasts)** para acciones del usuario y errores.
-- ⚠️ **Manejo de errores de API**, incluyendo aviso cuando se alcanza el límite de peticiones.
+- ⚠️ **Manejo de errores de API**, mostrando avisos al usuario cuando la api falla.
 - 🔗 Navegación fluida en una **SPA** sin recargas.
 - 📱 **Diseño responsive** optimizado para mobile y desktop.
 
@@ -59,8 +59,8 @@ El proyecto es una aplicación frontend desarrollada en React, con foco en el re
   - Optimizar la experiencia de usuario
 
 - **Manejo centralizado de errores de API**, permitiendo:
-  - Mostrar mensajes claros al usuario
-  - Detectar límites de peticiones
+  - Mostrar mensajes claros al usuario ante fallos en las peticiones
+  - Manejar escenarios de limites de peticiones de la API
   - Evitar estados inconsistentes en la UI
 
 - **Arquitectura modular**, separando:
